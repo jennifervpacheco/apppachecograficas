@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.button1 = new System.Windows.Forms.Button();
@@ -46,23 +46,25 @@
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // chart1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "leyenda";
-            legend1.Title = "Resultado de Votaciones";
-            this.chart1.Legends.Add(legend1);
+            chartArea6.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea6);
+            legend6.Name = "leyenda";
+            legend6.Title = "Resultado de Votaciones";
+            this.chart1.Legends.Add(legend6);
             this.chart1.Location = new System.Drawing.Point(2, 97);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "leyenda";
-            series1.Name = "votos";
-            this.chart1.Series.Add(series1);
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series6.Legend = "leyenda";
+            series6.Name = "votos";
+            this.chart1.Series.Add(series6);
             this.chart1.Size = new System.Drawing.Size(880, 647);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
@@ -74,9 +76,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1072, 135);
+            this.button1.Location = new System.Drawing.Point(1094, 142);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 23);
+            this.button1.Size = new System.Drawing.Size(106, 30);
             this.button1.TabIndex = 1;
             this.button1.Text = "Configuración";
             this.button1.UseVisualStyleBackColor = true;
@@ -87,7 +89,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(1072, 12);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(256, 24);
+            this.comboBox1.Size = new System.Drawing.Size(414, 24);
             this.comboBox1.TabIndex = 2;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -96,7 +98,7 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(1072, 57);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(256, 24);
+            this.comboBox2.Size = new System.Drawing.Size(414, 24);
             this.comboBox2.TabIndex = 3;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
@@ -104,7 +106,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(921, 161);
+            this.label1.Location = new System.Drawing.Point(921, 207);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(398, 39);
             this.label1.TabIndex = 4;
@@ -124,7 +126,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1066, 249);
+            this.label3.Location = new System.Drawing.Point(1066, 281);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 95);
             this.label3.TabIndex = 6;
@@ -154,9 +156,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(915, 60);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(152, 17);
+            this.label6.Size = new System.Drawing.Size(74, 17);
             this.label6.TabIndex = 9;
-            this.label6.Text = "Fecha de la Asamblea:";
+            this.label6.Text = "Asamblea:";
             // 
             // comboBox3
             // 
@@ -166,7 +168,7 @@
             "Participacion Por Coeficientes"});
             this.comboBox3.Location = new System.Drawing.Point(1072, 102);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(256, 24);
+            this.comboBox3.Size = new System.Drawing.Size(414, 24);
             this.comboBox3.TabIndex = 10;
             // 
             // label7
@@ -188,11 +190,33 @@
             this.label8.TabIndex = 12;
             this.label8.Text = "¿Pregunta?";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(918, 142);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(170, 30);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "Actualizar Propiedades";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(1207, 142);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(197, 30);
+            this.button3.TabIndex = 14;
+            this.button3.Text = "Iniciar/Detener Seguimiento";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1358, 887);
+            this.ClientSize = new System.Drawing.Size(1876, 892);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.comboBox3);
@@ -231,6 +255,8 @@
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
 

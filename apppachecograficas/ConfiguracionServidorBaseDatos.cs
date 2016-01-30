@@ -44,9 +44,9 @@ namespace apppachecograficas
 
         private void ConfiguracionServidorBaseDatos_Load(object sender, EventArgs e)
         {
-            this.TopMost = true;
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.WindowState = FormWindowState.Maximized;
+            //this.TopMost = true;
+            //this.FormBorderStyle = FormBorderStyle.None;
+            //this.WindowState = FormWindowState.Maximized;
 
             StreamReader r = new StreamReader(this.archivoConfiguracion, Encoding.Default, true);
             string json = r.ReadToEnd();

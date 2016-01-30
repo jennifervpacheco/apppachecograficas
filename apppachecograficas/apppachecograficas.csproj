@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MessageBoxEx.cs" />
     <Compile Include="ConexionPostgres.cs" />
     <Compile Include="ConfiguracionServidorBaseDatos.cs">
       <SubType>Form</SubType>
