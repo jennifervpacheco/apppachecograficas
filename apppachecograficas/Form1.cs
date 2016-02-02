@@ -16,9 +16,13 @@ namespace apppachecograficas
 {
     public partial class Form1 : Form
     {
+        string nit;
+        string fecha;
         public Form1()
         {
             InitializeComponent();
+            this.fecha = fecha;
+            this.nit = nit;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -54,10 +58,10 @@ namespace apppachecograficas
             this.chart1.Series["votos"].Points.Clear();
 
             select sl1 = comboBox1.SelectedItem as select;
-            string nit = Convert.ToString(sl1.Value);
+            this.nit = Convert.ToString(sl1.Value);
 
             select sl2 = comboBox2.SelectedItem as select;
-            string fecha = Convert.ToString(sl2.Value);
+            this.fecha = Convert.ToString(sl2.Value);
 
             ConexionPostgres conn = new ConexionPostgres();
             string cadenaSql = "SELECT id_pregunta FROM modelo.pregunta_actual WHERE nit = '"+nit+"' AND fecha = '"+fecha+"';";
@@ -241,6 +245,12 @@ namespace apppachecograficas
             {
                 MessageBoxEx.Show("Se desactiva el seguimiento de la asamblea.", 1000);
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Quorum qu = new Quorum( this.nit, this.fecha);
+            qu.Show();
         }
     }
 }
