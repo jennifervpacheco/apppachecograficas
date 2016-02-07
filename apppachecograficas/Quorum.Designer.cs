@@ -54,11 +54,13 @@
             this.label1.Size = new System.Drawing.Size(99, 33);
             this.label1.TabIndex = 3;
             this.label1.Text = "label1";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Interval = 3000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Quorum
             // 
