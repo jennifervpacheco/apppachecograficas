@@ -26,6 +26,11 @@ namespace apppachecograficas
         {
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.cargarQuorum();
+            ConexionPostgres conn = new ConexionPostgres();
+            var cadenaSql1 = "select nombre   from modelo.asamblea  where nit='" + nit + "' AND fecha='" + fecha + "';";
+            var nombre = conn.consultar(cadenaSql1)[0]["nombre"];
+            label3.Text =nombre;
+
 
         }
         private void cargarQuorum()
@@ -71,10 +76,10 @@ namespace apppachecograficas
             }
 
 
-            //if (quorum >= 51)
-            //{
-            //    label1.ForeColor = System.Drawing.Color.Green;
-            //}
+            if (quorum == "51")
+            {
+                label1.ForeColor = System.Drawing.Color.Green;
+           }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -85,6 +90,11 @@ namespace apppachecograficas
         private void timer1_Tick(object sender, EventArgs e)
         {
             this.cargarQuorum();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

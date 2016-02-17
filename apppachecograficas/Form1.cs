@@ -55,7 +55,7 @@ namespace apppachecograficas
 
         private void cargarDatos()
         {
-            this.chart1.Series["votos"].Points.Clear();
+            this.chart3.Series["votos"].Points.Clear();
 
             select sl1 = comboBox1.SelectedItem as select;
             this.nit = Convert.ToString(sl1.Value);
@@ -70,7 +70,8 @@ namespace apppachecograficas
             //Si no hay una pregunta actual y no retorna resultados (longitud igual a 0)
             if(resultado.ToArray().Length == 0)
             {
-                MessageBoxEx.Show("Por favor ingrese una pregunta actual.",2000);
+                MessageBox.Show("Por favor ingrese una pregunta actual.");
+               // MessageBoxEx.Show("Por favor ingrese una pregunta actual.",2000);
                 return;
             }
 
@@ -155,7 +156,7 @@ namespace apppachecograficas
 
             foreach (KeyValuePair<int, double> resultadoOpcion in resultadoVotacion)
             {
-                this.chart1.Series["votos"].Points.AddXY( "Op. " + resultadoOpcion.Key + " - " + indiceOpciones[resultadoOpcion.Key] + ": " + resultadoOpcion.Value + " " + nombreVoto, resultadoOpcion.Value);
+                this.chart3.Series["votos"].Points.AddXY( "Op. " + resultadoOpcion.Key + " - " + indiceOpciones[resultadoOpcion.Key] + ": " + resultadoOpcion.Value + " " + nombreVoto, resultadoOpcion.Value);
             }
             
             //Se carga el quorum asistencia total caso unidades residenciales (iguales)
@@ -245,12 +246,33 @@ namespace apppachecograficas
             {
                 MessageBoxEx.Show("Se desactiva el seguimiento de la asamblea.", 1000);
             }
+            
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             Quorum qu = new Quorum( this.nit, this.fecha);
             qu.Show();
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //this.chart1.SaveImage("imagenes\\mychart.png", ChartImageFormat.Png);
+        }
+
+        private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
